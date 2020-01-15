@@ -31,22 +31,17 @@ while True:
 
           try:
               first = int(user_input_list[1])
+              second = int(user_input_list[2])
+              answer = decision(operation,first,second)
+              print(answer) 
           except ValueError:
-              print(f" {user_input_list[1]} это неправильное число")
-              first = int(input("Ещё раз введите первое число"))    
-
-          try:    
-              second = int(user_input_list[2])  
-          except ValueError:
-              print(f" {user_input_list[2]} это неправильное число")    
+              print("какое-то из чисел введено не правильно")
+              first = int(input("Ещё раз введите первое число"))
               second = int(input("Ещё раз введите второе число"))
-          
-          try:
-              answer = decision(operation,first,second)    
+              answer = decision(operation,first,second)
               print(answer)
           except Exception as e:
-              print (e)
-          
+              print (e)          
           
       else:
           break
